@@ -1,0 +1,14 @@
+.\bin\main.o: main.c
+.\bin\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bin\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_ints.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_memmap.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/debug.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/fpu.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/gpio.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/pin_map.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/interrupt.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/sysctl.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/uart.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/systick.h
+.\bin\main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/rom.h

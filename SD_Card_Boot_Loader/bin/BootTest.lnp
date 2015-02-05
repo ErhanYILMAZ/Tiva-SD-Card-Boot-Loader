@@ -1,0 +1,11 @@
+--cpu Cortex-M4.fp
+".\bin\bl_main.o"
+".\bin\bl_startup_rvmdk.o"
+".\bin\bl_check.o"
+".\bin\mmcbbp.o"
+".\bin\pff.o"
+--library_type=microlib --strict --scatter ".\bl_link.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\BootTest.map" -o .\bin\BootTest.axf

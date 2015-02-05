@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\bkuvet\Desktop\LEDBlink\LEDBlink.uvproj
+Project File Date:  02/05/2015
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_rvmdk.S...
+linking...
+.\Bin\LEDBlink.axf: error: L6002U: Could not open file .\driverlib.lib: No such file or directory
+".\Bin\LEDBlink.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(16): error:  #5: cannot open source input file "driverlib": No such file or directory
+assembling startup_rvmdk.S...
+".\Bin\LEDBlink.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_rvmdk.S...
+linking...
+Program Size: Code=1616 RO-data=16 RW-data=0 ZI-data=1024  
+After Build - User command #1: fromelf --bin --output .\Bin\LEDBlink.bin .\Bin\LEDBlink.axf
+".\Bin\LEDBlink.axf" - 0 Errors, 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_rvmdk.S...
+linking...
+Program Size: Code=1616 RO-data=16 RW-data=0 ZI-data=1024  
+After Build - User command #1: fromelf --bin --output .\Bin\LEDBlink.bin .\Bin\LEDBlink.axf
+".\Bin\LEDBlink.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\bkuvet\\Desktop\\LEDBlink\\Bin\\LEDBlink.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Full Chip Erase Done.
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling main.c...
+assembling startup_rvmdk.S...
+linking...
+Program Size: Code=1616 RO-data=16 RW-data=0 ZI-data=1024  
+After Build - User command #1: fromelf --bin --output .\Bin\LEDBlink.bin .\Bin\LEDBlink.axf
+".\Bin\LEDBlink.axf" - 0 Errors, 0 Warning(s).
+Rebuild target 'LEDBlink'
+compiling main.c...
+assembling startup_rvmdk.S...
+linking...
+Program Size: Code=1616 RO-data=16 RW-data=0 ZI-data=1024  
+After Build - User command #1: fromelf --bin --output .\Bin\LEDBlink.bin .\Bin\LEDBlink.axf
+".\Bin\LEDBlink.axf" - 0 Errors, 0 Warning(s).

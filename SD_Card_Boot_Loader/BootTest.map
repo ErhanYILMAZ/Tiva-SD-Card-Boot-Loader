@@ -1,0 +1,278 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Professional]
+
+==============================================================================
+
+Section Cross References
+
+    bl_main.o(i.ConfigureDevice) refers to bl_startup_rvmdk.o(.text) for Delay
+    bl_main.o(i.Updater) refers to pff.o(i.pf_mount) for pf_mount
+    bl_main.o(i.Updater) refers to pff.o(i.pf_open) for pf_open
+    bl_main.o(i.Updater) refers to pff.o(i.pf_read) for pf_read
+    bl_main.o(i.Updater) refers to bl_main.o(.bss) for .bss
+    bl_startup_rvmdk.o(RESET) refers to bl_startup_rvmdk.o(.bss) for g_pulStack
+    bl_startup_rvmdk.o(RESET) refers to bl_startup_rvmdk.o(.text) for IntDefaultHandler
+    bl_startup_rvmdk.o(.text) refers to bl_check.o(i.CheckForceUpdate) for CheckForceUpdate
+    bl_startup_rvmdk.o(.text) refers to bl_main.o(i.ConfigureDevice) for ConfigureDevice
+    bl_startup_rvmdk.o(.text) refers to bl_main.o(i.Updater) for Updater
+    bl_check.o(i.CheckForceUpdate) refers to bl_check.o(i.CheckGPIOForceUpdate) for CheckGPIOForceUpdate
+    bl_check.o(i.CheckGPIOForceUpdate) refers to bl_startup_rvmdk.o(.text) for Delay
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(i.init_port) for init_port
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(i.skip_mmc) for skip_mmc
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(i.send_cmd) for send_cmd
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(i.rcvr_mmc) for rcvr_mmc
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(i.release_spi) for release_spi
+    mmcbbp.o(i.disk_initialize) refers to mmcbbp.o(.data) for .data
+    mmcbbp.o(i.disk_readp) refers to mmcbbp.o(i.send_cmd) for send_cmd
+    mmcbbp.o(i.disk_readp) refers to mmcbbp.o(i.rcvr_mmc) for rcvr_mmc
+    mmcbbp.o(i.disk_readp) refers to mmcbbp.o(i.skip_mmc) for skip_mmc
+    mmcbbp.o(i.disk_readp) refers to mmcbbp.o(i.release_spi) for release_spi
+    mmcbbp.o(i.disk_readp) refers to mmcbbp.o(.data) for .data
+    mmcbbp.o(i.disk_writep) refers to mmcbbp.o(i.xmit_mmc) for xmit_mmc
+    mmcbbp.o(i.disk_writep) refers to mmcbbp.o(i.send_cmd) for send_cmd
+    mmcbbp.o(i.disk_writep) refers to mmcbbp.o(i.rcvr_mmc) for rcvr_mmc
+    mmcbbp.o(i.disk_writep) refers to mmcbbp.o(i.release_spi) for release_spi
+    mmcbbp.o(i.disk_writep) refers to mmcbbp.o(.data) for .data
+    mmcbbp.o(i.release_spi) refers to mmcbbp.o(i.rcvr_mmc) for rcvr_mmc
+    mmcbbp.o(i.send_cmd) refers to mmcbbp.o(i.rcvr_mmc) for rcvr_mmc
+    mmcbbp.o(i.send_cmd) refers to mmcbbp.o(i.xmit_mmc) for xmit_mmc
+    mmcbbp.o(i.skip_mmc) refers to mmcbbp.o(i.xmit_mmc) for xmit_mmc
+    pff.o(i.check_fs) refers to mmcbbp.o(i.disk_readp) for disk_readp
+    pff.o(i.clust2sect) refers to pff.o(.data) for .data
+    pff.o(i.create_name) refers to pff.o(.constdata) for .constdata
+    pff.o(i.dir_find) refers to pff.o(i.dir_rewind) for dir_rewind
+    pff.o(i.dir_find) refers to mmcbbp.o(i.disk_readp) for disk_readp
+    pff.o(i.dir_find) refers to pff.o(i.dir_next) for dir_next
+    pff.o(i.dir_next) refers to pff.o(i.get_fat) for get_fat
+    pff.o(i.dir_next) refers to pff.o(i.clust2sect) for clust2sect
+    pff.o(i.dir_next) refers to pff.o(.data) for .data
+    pff.o(i.dir_rewind) refers to pff.o(i.clust2sect) for clust2sect
+    pff.o(i.dir_rewind) refers to pff.o(.data) for .data
+    pff.o(i.follow_path) refers to pff.o(i.dir_rewind) for dir_rewind
+    pff.o(i.follow_path) refers to pff.o(i.create_name) for create_name
+    pff.o(i.follow_path) refers to pff.o(i.dir_find) for dir_find
+    pff.o(i.follow_path) refers to pff.o(i.get_clust) for get_clust
+    pff.o(i.get_fat) refers to mmcbbp.o(i.disk_readp) for disk_readp
+    pff.o(i.get_fat) refers to pff.o(.data) for .data
+    pff.o(i.pf_lseek) refers to pff.o(i.get_fat) for get_fat
+    pff.o(i.pf_lseek) refers to pff.o(i.clust2sect) for clust2sect
+    pff.o(i.pf_lseek) refers to pff.o(.data) for .data
+    pff.o(i.pf_mount) refers to mmcbbp.o(i.disk_initialize) for disk_initialize
+    pff.o(i.pf_mount) refers to pff.o(i.check_fs) for check_fs
+    pff.o(i.pf_mount) refers to mmcbbp.o(i.disk_readp) for disk_readp
+    pff.o(i.pf_mount) refers to pff.o(.data) for .data
+    pff.o(i.pf_open) refers to pff.o(i.follow_path) for follow_path
+    pff.o(i.pf_open) refers to pff.o(i.get_clust) for get_clust
+    pff.o(i.pf_open) refers to pff.o(.data) for .data
+    pff.o(i.pf_read) refers to pff.o(i.get_fat) for get_fat
+    pff.o(i.pf_read) refers to pff.o(i.clust2sect) for clust2sect
+    pff.o(i.pf_read) refers to mmcbbp.o(i.disk_readp) for disk_readp
+    pff.o(i.pf_read) refers to pff.o(.data) for .data
+    pff.o(i.pf_write) refers to mmcbbp.o(i.disk_writep) for disk_writep
+    pff.o(i.pf_write) refers to pff.o(i.get_fat) for get_fat
+    pff.o(i.pf_write) refers to pff.o(i.clust2sect) for clust2sect
+    pff.o(i.pf_write) refers to pff.o(.data) for .data
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing mmcbbp.o(i.disk_writep), (192 bytes).
+    Removing pff.o(i.pf_lseek), (152 bytes).
+    Removing pff.o(i.pf_write), (256 bytes).
+
+3 unused section(s) (total 600 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      172  bl_startup_rvmdk.o(RESET)
+    .\\Source\\bl_config.c                   0x00000000   Number         0  bl_startup_rvmdk.o ABSOLUTE
+    Petit\mmcbbp.c                           0x00000000   Number         0  mmcbbp.o ABSOLUTE
+    Petit\pff.c                              0x00000000   Number         0  pff.o ABSOLUTE
+    Source\bl_check.c                        0x00000000   Number         0  bl_check.o ABSOLUTE
+    Source\bl_main.c                         0x00000000   Number         0  bl_main.o ABSOLUTE
+    $v0                                      0x00000044   Number         0  bl_startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000091   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000093   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    UpdateHandler                            0x00000095   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    .text                                    0x200000ac   Section       56  bl_startup_rvmdk.o(.text)
+    $v0                                      0x200000ac   Number         0  bl_startup_rvmdk.o(.text)
+    Reset_Handler_In_SRAM                    0x200000ad   Thumb Code     0  bl_startup_rvmdk.o(.text)
+    UpdateHandler_In_SRAM                    0x200000d1   Thumb Code     0  bl_startup_rvmdk.o(.text)
+    IntDefaultHandler                        0x200000db   Thumb Code     0  bl_startup_rvmdk.o(.text)
+    i.CheckForceUpdate                       0x200000e4   Section        0  bl_check.o(i.CheckForceUpdate)
+    i.CheckGPIOForceUpdate                   0x20000114   Section        0  bl_check.o(i.CheckGPIOForceUpdate)
+    i.ConfigureDevice                        0x20000178   Section        0  bl_main.o(i.ConfigureDevice)
+    i.Updater                                0x2000019c   Section        0  bl_main.o(i.Updater)
+    i.check_fs                               0x200003c0   Section        0  pff.o(i.check_fs)
+    check_fs                                 0x200003c1   Thumb Code    68  pff.o(i.check_fs)
+    i.clust2sect                             0x20000404   Section        0  pff.o(i.clust2sect)
+    clust2sect                               0x20000405   Thumb Code    28  pff.o(i.clust2sect)
+    i.create_name                            0x20000424   Section        0  pff.o(i.create_name)
+    create_name                              0x20000425   Thumb Code   118  pff.o(i.create_name)
+    i.dir_find                               0x200004a0   Section        0  pff.o(i.dir_find)
+    dir_find                                 0x200004a1   Thumb Code    98  pff.o(i.dir_find)
+    i.dir_next                               0x20000504   Section        0  pff.o(i.dir_next)
+    dir_next                                 0x20000505   Thumb Code    90  pff.o(i.dir_next)
+    i.dir_rewind                             0x20000564   Section        0  pff.o(i.dir_rewind)
+    dir_rewind                               0x20000565   Thumb Code    44  pff.o(i.dir_rewind)
+    i.disk_initialize                        0x20000594   Section        0  mmcbbp.o(i.disk_initialize)
+    i.disk_readp                             0x200006c4   Section        0  mmcbbp.o(i.disk_readp)
+    i.follow_path                            0x20000764   Section        0  pff.o(i.follow_path)
+    follow_path                              0x20000765   Thumb Code   104  pff.o(i.follow_path)
+    i.get_clust                              0x200007cc   Section        0  pff.o(i.get_clust)
+    get_clust                                0x200007cd   Thumb Code    10  pff.o(i.get_clust)
+    i.get_fat                                0x200007d8   Section        0  pff.o(i.get_fat)
+    get_fat                                  0x200007d9   Thumb Code    64  pff.o(i.get_fat)
+    i.init_port                              0x2000081c   Section        0  mmcbbp.o(i.init_port)
+    i.pf_mount                               0x200008cc   Section        0  pff.o(i.pf_mount)
+    i.pf_open                                0x200009c0   Section        0  pff.o(i.pf_open)
+    i.pf_read                                0x20000a1c   Section        0  pff.o(i.pf_read)
+    i.rcvr_mmc                               0x20000ad4   Section        0  mmcbbp.o(i.rcvr_mmc)
+    rcvr_mmc                                 0x20000ad5   Thumb Code    34  mmcbbp.o(i.rcvr_mmc)
+    i.release_spi                            0x20000afc   Section        0  mmcbbp.o(i.release_spi)
+    release_spi                              0x20000afd   Thumb Code    28  mmcbbp.o(i.release_spi)
+    i.send_cmd                               0x20000b18   Section        0  mmcbbp.o(i.send_cmd)
+    send_cmd                                 0x20000b19   Thumb Code   146  mmcbbp.o(i.send_cmd)
+    i.skip_mmc                               0x20000baa   Section        0  mmcbbp.o(i.skip_mmc)
+    skip_mmc                                 0x20000bab   Thumb Code    16  mmcbbp.o(i.skip_mmc)
+    i.xmit_mmc                               0x20000bbc   Section        0  mmcbbp.o(i.xmit_mmc)
+    xmit_mmc                                 0x20000bbd   Thumb Code    30  mmcbbp.o(i.xmit_mmc)
+    .constdata                               0x20000be0   Section      128  pff.o(.constdata)
+    cvt                                      0x20000be0   Data         128  pff.o(.constdata)
+    .data                                    0x20000c60   Section        8  mmcbbp.o(.data)
+    CardType                                 0x20000c60   Data           1  mmcbbp.o(.data)
+    wc                                       0x20000c64   Data           4  mmcbbp.o(.data)
+    .data                                    0x20000c68   Section        4  pff.o(.data)
+    FatFs                                    0x20000c68   Data           4  pff.o(.data)
+    .bss                                     0x20000c6c   Section      128  bl_main.o(.bss)
+    .bss                                     0x20000cec   Section      192  bl_startup_rvmdk.o(.bss)
+    g_pulStack                               0x20000cec   Data           0  bl_startup_rvmdk.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  bl_startup_rvmdk.o(RESET)
+    ProcessorInit                            0x00000045   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    Reset_Handler                            0x00000079   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    StartApplication                         0x200000bb   Thumb Code     0  bl_startup_rvmdk.o(.text)
+    Delay                                    0x200000dd   Thumb Code     0  bl_startup_rvmdk.o(.text)
+    CheckForceUpdate                         0x200000e5   Thumb Code    42  bl_check.o(i.CheckForceUpdate)
+    CheckGPIOForceUpdate                     0x20000115   Thumb Code    86  bl_check.o(i.CheckGPIOForceUpdate)
+    ConfigureDevice                          0x20000179   Thumb Code    30  bl_main.o(i.ConfigureDevice)
+    Updater                                  0x2000019d   Thumb Code   506  bl_main.o(i.Updater)
+    disk_initialize                          0x20000595   Thumb Code   296  mmcbbp.o(i.disk_initialize)
+    disk_readp                               0x200006c5   Thumb Code   150  mmcbbp.o(i.disk_readp)
+    init_port                                0x2000081d   Thumb Code   158  mmcbbp.o(i.init_port)
+    pf_mount                                 0x200008cd   Thumb Code   238  pff.o(i.pf_mount)
+    pf_open                                  0x200009c1   Thumb Code    88  pff.o(i.pf_open)
+    pf_read                                  0x20000a1d   Thumb Code   178  pff.o(i.pf_read)
+    Image$$SRAM$$ZI$$Base                    0x20000c6c   Number         0  bl_main.o(.bss)
+    bWriteBuffer                             0x20000c6c   Data         128  bl_main.o(.bss)
+    Image$$SRAM$$ZI$$Limit                   0x20000dac   Number         0  bl_startup_rvmdk.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000079
+
+  Load Region FLASH (Base: 0x00000000, Size: 0x00000c6c, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region RESET (Base: 0x00000000, Size: 0x000000ac, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000ac   Code   RO           73  * RESET               bl_startup_rvmdk.o
+
+
+    Execution Region SRAM (Base: 0x200000ac, Size: 0x00000d00, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200000ac   0x00000038   Code   RO           74    .text               bl_startup_rvmdk.o
+    0x200000e4   0x00000030   Code   RO           80    i.CheckForceUpdate  bl_check.o
+    0x20000114   0x00000064   Code   RO           81    i.CheckGPIOForceUpdate  bl_check.o
+    0x20000178   0x00000024   Code   RO            1    i.ConfigureDevice   bl_main.o
+    0x2000019c   0x00000224   Code   RO            2    i.Updater           bl_main.o
+    0x200003c0   0x00000044   Code   RO          173    i.check_fs          pff.o
+    0x20000404   0x00000020   Code   RO          174    i.clust2sect        pff.o
+    0x20000424   0x0000007c   Code   RO          175    i.create_name       pff.o
+    0x200004a0   0x00000062   Code   RO          176    i.dir_find          pff.o
+    0x20000502   0x00000002   PAD
+    0x20000504   0x00000060   Code   RO          177    i.dir_next          pff.o
+    0x20000564   0x00000030   Code   RO          178    i.dir_rewind        pff.o
+    0x20000594   0x00000130   Code   RO           98    i.disk_initialize   mmcbbp.o
+    0x200006c4   0x000000a0   Code   RO           99    i.disk_readp        mmcbbp.o
+    0x20000764   0x00000068   Code   RO          179    i.follow_path       pff.o
+    0x200007cc   0x0000000a   Code   RO          180    i.get_clust         pff.o
+    0x200007d6   0x00000002   PAD
+    0x200007d8   0x00000044   Code   RO          181    i.get_fat           pff.o
+    0x2000081c   0x000000b0   Code   RO          101    i.init_port         mmcbbp.o
+    0x200008cc   0x000000f4   Code   RO          183    i.pf_mount          pff.o
+    0x200009c0   0x0000005c   Code   RO          184    i.pf_open           pff.o
+    0x20000a1c   0x000000b8   Code   RO          185    i.pf_read           pff.o
+    0x20000ad4   0x00000028   Code   RO          102    i.rcvr_mmc          mmcbbp.o
+    0x20000afc   0x0000001c   Code   RO          103    i.release_spi       mmcbbp.o
+    0x20000b18   0x00000092   Code   RO          104    i.send_cmd          mmcbbp.o
+    0x20000baa   0x00000010   Code   RO          105    i.skip_mmc          mmcbbp.o
+    0x20000bba   0x00000002   PAD
+    0x20000bbc   0x00000024   Code   RO          106    i.xmit_mmc          mmcbbp.o
+    0x20000be0   0x00000080   Data   RO          187    .constdata          pff.o
+    0x20000c60   0x00000008   Data   RW          107    .data               mmcbbp.o
+    0x20000c68   0x00000004   Data   RW          188    .data               pff.o
+    0x20000c6c   0x00000080   Zero   RW            3    .bss                bl_main.o
+    0x20000cec   0x000000c0   Zero   RW           72    .bss                bl_startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       148         20          0          0          0       1438   bl_check.o
+       584         48          0          0        128       8395   bl_main.o
+       228         86          0          0        192        464   bl_startup_rvmdk.o
+       906         48          0          8          0       6421   mmcbbp.o
+      1168         40        128          4          0      10987   pff.o
+
+    ----------------------------------------------------------------------
+      3040        242        128         12        320      27705   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3040        242        128         12        320      25405   Grand Totals
+      3040        242        128         12        320      25405   ELF Image Totals
+      3040        242        128         12          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3168 (   3.09kB)
+    Total RW  Size (RW Data + ZI Data)               332 (   0.32kB)
+    Total ROM Size (Code + RO Data + RW Data)       3180 (   3.11kB)
+
+==============================================================================
+

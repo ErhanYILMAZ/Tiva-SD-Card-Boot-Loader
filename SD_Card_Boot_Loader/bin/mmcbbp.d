@@ -1,0 +1,14 @@
+.\bin\mmcbbp.o: Petit\mmcbbp.c
+.\bin\mmcbbp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bin\mmcbbp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_memmap.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_types.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/gpio.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/pin_map.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/rom.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/rom_map.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/ssi.h
+.\bin\mmcbbp.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/sysctl.h
+.\bin\mmcbbp.o: Petit\diskio.h
+.\bin\mmcbbp.o: Petit\integer.h
+.\bin\mmcbbp.o: .\Petit/pffconf.h

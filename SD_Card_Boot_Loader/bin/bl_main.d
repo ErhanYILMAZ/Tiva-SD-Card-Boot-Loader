@@ -1,0 +1,17 @@
+.\bin\bl_main.o: Source\bl_main.c
+.\bin\bl_main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bin\bl_main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/rom.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_gpio.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_flash.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_i2c.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_memmap.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_nvic.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_sysctl.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/sysctl.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib/gpio.h
+.\bin\bl_main.o: C:\ti\TivaWare_C_Series-2.1.0.12573\inc/hw_types.h
+.\bin\bl_main.o: Source\bl_config.h
+.\bin\bl_main.o: .\Petit/pff.h
+.\bin\bl_main.o: .\Petit/integer.h
+.\bin\bl_main.o: .\Petit/pffconf.h

@@ -1,0 +1,8 @@
+--cpu Cortex-M4.fp
+".\bin\main.o"
+".\bin\startup_rvmdk.o"
+"C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --strict --scatter ".\Bin\LEDBlink.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\LEDBlink.map" -o .\Bin\LEDBlink.axf

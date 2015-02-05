@@ -1,0 +1,50 @@
+Dependencies for Project 'BootTest', Target 'BootLoader': (DO NOT MODIFY !)
+F (.\Source\bl_main.c)(0x54D37F99)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I. -IC:\ti\TivaWare_C_Series-2.1.0.12573 --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -D_USE_WRITE -DTM4C123GH6PM-o .\bin\bl_main.o --omf_browse .\bin\bl_main.crf --depend .\bin\bl_main.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7FD94)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\rom.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_gpio.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_flash.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_i2c.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_memmap.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_nvic.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_sysctl.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\sysctl.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\gpio.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_types.h)(0x54C756E2)
+I (D:\Erhan\SD_Card_Boot_Loader\Source\bl_config.h)(0x54D380E6)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\pff.h)(0x54C75B39)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\integer.h)(0x5396260A)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\pffconf.h)(0x54C75E25)
+F (.\bl_startup_rvmdk.S)(0x54537956)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-o .\bin\bl_startup_rvmdk.o --depend .\bin\bl_startup_rvmdk.d)
+F (.\Source\bl_check.c)(0x54D383C8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I. -IC:\ti\TivaWare_C_Series-2.1.0.12573 --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -D_USE_WRITE -DTM4C123GH6PM-o .\bin\bl_check.o --omf_browse .\bin\bl_check.crf --depend .\bin\bl_check.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7FD94)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_gpio.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_memmap.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_sysctl.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_types.h)(0x54C756E2)
+I (D:\Erhan\SD_Card_Boot_Loader\Source\bl_config.h)(0x54D380E6)
+F (.\Petit\diskio.h)(0x54BCC7A4)()
+F (.\Petit\integer.h)(0x5396260A)()
+F (.\Petit\mmcbbp.c)(0x54D37FD9)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I. -IC:\ti\TivaWare_C_Series-2.1.0.12573 --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -D_USE_WRITE -DTM4C123GH6PM-o .\bin\mmcbbp.o --omf_browse .\bin\mmcbbp.crf --depend .\bin\mmcbbp.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7FD94)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_memmap.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\inc\hw_types.h)(0x54C756E2)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\gpio.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\pin_map.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\rom.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\rom_map.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\ssi.h)(0x54C756B7)
+I (C:\ti\TivaWare_C_Series-2.1.0.12573\driverlib\sysctl.h)(0x54C756B7)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\diskio.h)(0x54BCC7A4)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\integer.h)(0x5396260A)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\pffconf.h)(0x54C75E25)
+F (.\Petit\pff.c)(0x54C75C07)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I. -IC:\ti\TivaWare_C_Series-2.1.0.12573 --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -D_USE_WRITE -DTM4C123GH6PM-o .\bin\pff.o --omf_browse .\bin\pff.crf --depend .\bin\pff.d)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\pff.h)(0x54C75B39)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\integer.h)(0x5396260A)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\pffconf.h)(0x54C75E25)
+I (D:\Erhan\SD_Card_Boot_Loader\Petit\diskio.h)(0x54BCC7A4)
+F (.\Petit\pff.h)(0x54C75B39)()
+F (.\Petit\pffconf.h)(0x54C75E25)()

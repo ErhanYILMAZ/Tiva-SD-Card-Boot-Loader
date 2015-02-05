@@ -1,0 +1,340 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\bin\BootTest.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\bin\BootTest.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Feb 05 16:57:30 2015
+<BR><P>
+<H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Reset_Handler_In_SRAM &rArr; Updater &rArr; pf_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[8]">ProcessorInit</a>
+ <LI><a href="#[7]">Reset_Handler</a>
+ <LI><a href="#[22]">StartApplication</a>
+ <LI><a href="#[c]">Delay</a>
+ <LI><a href="#[5]">Reset_Handler_In_SRAM</a>
+ <LI><a href="#[6]">UpdateHandler_In_SRAM</a>
+ <LI><a href="#[3]">IntDefaultHandler</a>
+ <LI><a href="#[1]">NmiSR</a>
+ <LI><a href="#[2]">FaultISR</a>
+ <LI><a href="#[4]">UpdateHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[c]">Delay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[c]">Delay</a><BR>
+ <LI><a href="#[1b]">send_cmd</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1b]">send_cmd</a><BR>
+ <LI><a href="#[3]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">IntDefaultHandler</a><BR>
+ <LI><a href="#[1]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1]">NmiSR</a><BR>
+ <LI><a href="#[2]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2]">FaultISR</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">FaultISR</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[3]">IntDefaultHandler</a> from bl_startup_rvmdk.o(.text) referenced 7 times from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[1]">NmiSR</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[7]">Reset_Handler</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[5]">Reset_Handler_In_SRAM</a> from bl_startup_rvmdk.o(.text) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[4]">UpdateHandler</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[6]">UpdateHandler_In_SRAM</a> from bl_startup_rvmdk.o(.text) referenced from bl_startup_rvmdk.o(RESET)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[8]"></a>ProcessorInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateHandler
+</UL>
+
+<P><STRONG><a name="[7]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessorInit
+</UL>
+
+<P><STRONG><a name="[22]"></a>StartApplication</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text), UNUSED)
+
+<P><STRONG><a name="[c]"></a>Delay</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckGPIOForceUpdate
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[9]"></a>CheckForceUpdate</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, bl_check.o(i.CheckForceUpdate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = CheckForceUpdate &rArr; CheckGPIOForceUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckGPIOForceUpdate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[d]"></a>CheckGPIOForceUpdate</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, bl_check.o(i.CheckGPIOForceUpdate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = CheckGPIOForceUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckForceUpdate
+</UL>
+
+<P><STRONG><a name="[a]"></a>ConfigureDevice</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, bl_main.o(i.ConfigureDevice))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = ConfigureDevice
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[b]"></a>Updater</STRONG> (Thumb, 506 bytes, Stack size 88 bytes, bl_main.o(i.Updater))
+<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = Updater &rArr; pf_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_read
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_open
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_mount
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateHandler_In_SRAM
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[18]"></a>disk_initialize</STRONG> (Thumb, 296 bytes, Stack size 40 bytes, mmcbbp.o(i.disk_initialize))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = disk_initialize &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_port
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;skip_mmc
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_spi
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcvr_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_mount
+</UL>
+
+<P><STRONG><a name="[12]"></a>disk_readp</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, mmcbbp.o(i.disk_readp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;skip_mmc
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_spi
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcvr_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_fs
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_read
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_mount
+</UL>
+
+<P><STRONG><a name="[19]"></a>init_port</STRONG> (Thumb, 158 bytes, Stack size 24 bytes, mmcbbp.o(i.init_port))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = init_port
+</UL>
+<BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+</UL>
+
+<P><STRONG><a name="[e]"></a>pf_mount</STRONG> (Thumb, 238 bytes, Stack size 56 bytes, pff.o(i.pf_mount))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = pf_mount &rArr; check_fs &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_fs
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[f]"></a>pf_open</STRONG> (Thumb, 88 bytes, Stack size 80 bytes, pff.o(i.pf_open))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = pf_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_clust
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[10]"></a>pf_read</STRONG> (Thumb, 178 bytes, Stack size 32 bytes, pff.o(i.pf_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = pf_read &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[5]"></a>Reset_Handler_In_SRAM</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
+<LI>Call Chain = Reset_Handler_In_SRAM &rArr; Updater &rArr; pf_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckForceUpdate
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[6]"></a>UpdateHandler_In_SRAM</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
+<LI>Call Chain = UpdateHandler_In_SRAM &rArr; Updater &rArr; pf_open &rArr; follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[1]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[2]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[4]"></a>UpdateHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessorInit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[1c]"></a>rcvr_mmc</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, mmcbbp.o(i.rcvr_mmc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = rcvr_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_spi
+</UL>
+
+<P><STRONG><a name="[1d]"></a>release_spi</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mmcbbp.o(i.release_spi))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = release_spi &rArr; rcvr_mmc
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcvr_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+</UL>
+
+<P><STRONG><a name="[1b]"></a>send_cmd</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, mmcbbp.o(i.send_cmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40 + In Cycle
+<LI>Call Chain = send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xmit_mmc
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcvr_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+</UL>
+
+<P><STRONG><a name="[1a]"></a>skip_mmc</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mmcbbp.o(i.skip_mmc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = skip_mmc &rArr; xmit_mmc
+</UL>
+<BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xmit_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
+</UL>
+
+<P><STRONG><a name="[21]"></a>xmit_mmc</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, mmcbbp.o(i.xmit_mmc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xmit_mmc
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;skip_mmc
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_cmd
+</UL>
+
+<P><STRONG><a name="[11]"></a>check_fs</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, pff.o(i.check_fs))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = check_fs &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_mount
+</UL>
+
+<P><STRONG><a name="[17]"></a>clust2sect</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, pff.o(i.clust2sect))
+<BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_rewind
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_next
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_read
+</UL>
+
+<P><STRONG><a name="[1f]"></a>create_name</STRONG> (Thumb, 118 bytes, Stack size 20 bytes, pff.o(i.create_name))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = create_name
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
+</UL>
+
+<P><STRONG><a name="[13]"></a>dir_find</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, pff.o(i.dir_find))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_rewind
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_next
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
+</UL>
+
+<P><STRONG><a name="[15]"></a>dir_next</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, pff.o(i.dir_next))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
+</UL>
+
+<P><STRONG><a name="[14]"></a>dir_rewind</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, pff.o(i.dir_rewind))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = dir_rewind
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
+</UL>
+
+<P><STRONG><a name="[1e]"></a>follow_path</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, pff.o(i.follow_path))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = follow_path &rArr; dir_find &rArr; dir_next &rArr; get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_clust
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_rewind
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_name
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_open
+</UL>
+
+<P><STRONG><a name="[20]"></a>get_clust</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pff.o(i.get_clust))
+<BR><BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_open
+</UL>
+
+<P><STRONG><a name="[16]"></a>get_fat</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, pff.o(i.get_fat))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = get_fat &rArr; disk_readp &rArr; send_cmd &rArr;  send_cmd (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_readp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_next
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pf_read
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
